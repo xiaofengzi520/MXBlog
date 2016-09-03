@@ -1,10 +1,4 @@
-/**
- * Created with JetBrains WebStorm.
- * User: 灵勇
- * Date: 13-8-5
- * Time: 下午8:59
- * To change this template use File | Settings | File Templates.
- */
+
 
 
 $('.get-ten').click(function(){
