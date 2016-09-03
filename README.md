@@ -1,7 +1,7 @@
 # MXBlog
 ============
 
->A simple blog built by node.js , express4 and mongodb. Live demo : [xiaoself.com](http://www.xiaoself.com)
+>A simple blog built by node.js , express and mongodb. Live demo : [xiaoself.com](http://www.xiaoself.com)
 
 
 
