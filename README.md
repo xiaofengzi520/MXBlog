@@ -74,7 +74,7 @@ After you start the MXBlog in `node app.js`,you will see things like that:
 
 ```
 express-session deprecated undefined saveUninitialized option; provide saveUninitialized option config/express.js:67:13
-Express server listening on port 3000
+Express server listening on port 3001
 connected
 ```
 

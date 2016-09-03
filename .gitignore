@@ -15,6 +15,7 @@ DerivedData
 .idea/
 *.hmap
 *.less
+*.coffee
 .idea/workspace.xml
 
 
