@@ -1,0 +1,72 @@
+#tree_1_span {
+  font-size: 16px;
+  padding: 5px;
+  color: #357fbe !important;
+}
+#tree {
+  list-style: none !important;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 30px 40px;
+}
+#tree a {
+  display: inline-block !important;
+  outline: none !important;
+}
+#tree a:hover {
+  text-decoration: none !important;
+}
+#tree li {
+  outline: none !important;
+}
+#tree li:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+#tree li:hover > a > span {
+  color: rgba(0, 0, 0, 0.8);
+}
+#tree li a span {
+  color: rgba(0, 0, 0, 0.5);
+}
+#tree ul {
+  margin: 5px;
+  list-style: none !important;
+}
+.ztree li span.button.switch,
+li span.button.switch,
+li span.button.switch {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 15px;
+  font-size: 20px !important;
+  padding: 5px;
+  width: 25px;
+}
+.ztree li span.button.switch:hover,
+li span.button.switch:hover,
+li span.button.switch:hover {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.ztree li span.button.switch.center_open:before,
+span.button.switch.center_open:before,
+span.button.switch.center_open:before,
+span.button.switch.bottom_open:before,
+span.button.switch.bottom_open:before,
+span.button.switch.bottom_open:before {
+  content: "\f107";
+  line-height: 15px !important;
+}
+.ztree li span.button.switch.center_close:before,
+span.button.switch.center_close:before,
+span.button.switch.center_close:before,
+span.button.switch.bottom_close:before,
+span.button.switch.bottom_close:before,
+span.button.switch.bottom_close:before {
+  content: "\f105";
+  line-height: 15px !important;
+}

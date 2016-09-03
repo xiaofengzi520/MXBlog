@@ -1,0 +1,14 @@
+#mynav {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+}
+#mynav li > a {
+  color: rgba(255, 255, 255, 0.9);
+}
+#mynav li > a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+#mynav .navbar-brand {
+  color: lighten;
+  font-weight: bolder;
+}

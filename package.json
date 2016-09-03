@@ -1,0 +1,40 @@
+{
+    "name": "blog",
+    "version": "0.0.7",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+
+        "express": "*",
+        "jade": "*",
+        "less-middleware": "*",
+        "coffee-script": "*",
+        "connect-mongo": "*",
+        "mongoose": "*",
+        "morgan": "*",
+        "compression": "*",
+        "body-parser": "*",
+        "formidable": "*",
+        "method-override": "*",
+        "cookie-parser": "*",
+        "express-session": "*",
+        "serve-static": "*",
+        "express-validator": "*",
+        "async": "*",
+        "gm": "*",
+        "ccap": "*",
+        "notp": "*",
+        "thirty-two": "*",
+        "transformers": "*",
+        "marked": "*",
+        "jquery": "*",
+        "jsdom": "*",
+        "qn": "*",
+        "sanitize-html":"*"
+    },
+    "devDependencies": {
+        "node-dev": "latest"
+    }
+}

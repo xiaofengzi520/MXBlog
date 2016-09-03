@@ -1,0 +1,22 @@
+@media screen and (min-width: 768px) {
+  #mynav {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px groove rgba(0, 0, 0, 0.05);
+  }
+  #mynav li > a {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #mynav li > a:hover {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+#mynav .navbar-brand {
+  color: #2a6496 !important;
+  font-weight: normal;
+}
+#mynav .navbar-brand:hover {
+  color: #357fbe !important;
+}
+#mynav .navbar-brand img {
+  height: 20px;
+}

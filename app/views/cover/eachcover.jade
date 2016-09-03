@@ -1,0 +1,31 @@
+extends ../layout
+block head
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/stylesheets/index_ie.css">
+    <![endif]-->
+
+    link(rel='stylesheet',href='/stylesheets/cover/eachcover.css')
+    style.
+        .bg{
+            background-image:url('#{cover.img.px1366}');
+           }
+block content
+    .cover-index.bg
+        .cover-touming
+            .cover-wrapper
+                .getback
+                    a(href="/")
+                        i.fa.fa-angle-left
+
+                h1.cover-title=cover.title
+                .quote-warpper
+                    .quote!=cover.contentBegin
+
+    .cover-content.container
+         .content!=cover.content
+         if user
+            span
+                a(href='/editcover/'+cover._id) Edit
+
+
+

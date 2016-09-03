@@ -1,0 +1,69 @@
+doctype html
+html
+    head
+        link(rel='stylesheet',href='/stylesheets/bootstrap_less/bootstrap.css')
+        link(rel='stylesheet',href='/stylesheets/amd/font-awesome/css/font-awesome.min.css')
+        link(rel='stylesheet',href='/stylesheets/amd/amd.css')
+        link(rel='stylesheet',href='/stylesheets/amd/codemirror.css')
+        link(rel='stylesheet',href='/stylesheets/amd/xcode.css')
+        link(rel='stylesheet',href='/stylesheets/amd/markdown.css')
+        link(rel='stylesheet', href='/stylesheets/blog/eachblog.css')
+        script(src='/javascripts/amd/codemirror/lib/codemirror.js')
+        script(src='/javascripts/amd/codemirror/mode/markdown/markdown.js')
+        script(src='/javascripts/amd/hogan-3.0.1.min.js')
+        script(src='/javascripts/amd/marked-0.3.2.min.js')
+        script(src='/javascripts/amd/highlight-8.1.0.min.js')
+        script(src='/javascripts/amd/pie/pie.js')
+        script(src='/javascripts/amd/pie/unit-cover.js')
+        script(src='/javascripts/amd/pie/amarkdown.js')
+        script(src='/javascripts/jquery.js')
+
+
+    body
+        if action=='post'
+            #amd-editor
+            script.
+                    (function (PIE) {
+                    window.addEventListener('load', function () {
+                        PIE.makeAMarkdown(document.getElementById('amd-editor'), {
+                        amdBack: '/',
+                        amdPubMethod: 'post',
+                        amdPubAction: '/postcover',
+                        amdSaveAction: '/post',
+                        amdUploadImgAction: '/postimg',
+                        amdInitText:"",
+                        amdInitTitle:"",
+                        titleName: 'title',
+                        textName: 'text'
+                        });
+                    });
+                    }(PIE));
+        else
+            #amd-editor(data-text=""+cover.content,data-quote=""+cover.quote)
+            script.
+                (function (PIE) {
+                window.addEventListener('load', function () {
+                PIE.makeAMarkdown(document.getElementById('amd-editor'), {
+                amdBack: '/',
+                amdPubMethod: 'post',
+                amdPubAction: '/editcover/#{cover._id}',
+                amdSaveAction: '/editcover/#{cover._id}',
+                amdUploadImgAction: '/postimg',
+                amdInitText:$('[data-text]').attr('data-text').toString(),
+                amdInitTitle:"#{cover.title}",
+                titleName: 'title',
+                textName: 'text'
+                        });
+                        });
+                            }(PIE));
+            script.
+                $(function() {
+                    setTimeout(function(){
+                    $('.amd-content').css("background-image", "url(' #{cover.img.px1366} ')").css("background-size", "cover");
+                    $('#postimg').val('#{cover.img.original}');
+                    $('#quote').val($('[data-quote]').attr('data-quote').toString());
+                    },1000);
+                });
+
+
+        script(src='/javascripts/cover/post.js')

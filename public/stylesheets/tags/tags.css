@@ -1,0 +1,80 @@
+@media screen and (min-width: 768px) {
+  #mynav {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px groove rgba(0, 0, 0, 0.05);
+  }
+  #mynav li > a {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #mynav li > a:hover {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+#mynav .navbar-brand {
+  color: #2a6496 !important;
+  font-weight: normal;
+}
+#mynav .navbar-brand:hover {
+  color: #357fbe !important;
+}
+#mynav .navbar-brand img {
+  height: 20px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+}
+body {
+  background-color: #fff!important;
+}
+body .pager {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+body .pager .tags {
+  padding-top: 30px;
+}
+body .pager .tag {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: rgba(0, 0, 0, 0.7);
+  min-height: 200px;
+}
+body .pager .tag:hover {
+  text-decoration: none;
+}
+body .pager .tag h1 {
+  line-height: 200px;
+  padding: 0;
+  margin: 0;
+}
+body .pager .tag > a {
+  position: relative;
+  text-decoration: none;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+}
+body .pager .tag > a .count {
+  width: 100%;
+  text-align: center;
+  line-height: 200px;
+  height: 200px;
+  font-size: 30px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: cornflowerblue;
+}
+@media screen and (min-width: 768px) {
+  .eachblog {
+    font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1" !important;
+  }
+}

@@ -1,0 +1,16 @@
+extends ../layout
+block head
+    link(rel='stylesheet', href='/stylesheets/home/login.css')
+block content
+    .container.formwrapper
+        .row
+            form.form-reg(method="post")
+                h2.form-reg-heading               Log in
+                input.input-block-level(type='email',placeholder='请输入邮箱',name='email')
+                input.input-block-level(type='password',placeholder='请输入密码',name='password')
+
+                button.btn.btn-primary.btn-block(type='submit')            Log in
+
+
+block scripts
+    script(src="/javascripts/login.js")

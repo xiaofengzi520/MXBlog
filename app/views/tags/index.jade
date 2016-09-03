@@ -1,0 +1,21 @@
+extends ../layout
+block head
+
+    link(rel='stylesheet', href='/stylesheets/tags/tags.css')
+
+block content
+    .pager#tags
+        .tags.container
+             -each tag in tags
+                  .tag
+                     a(href='/tag/'+tag.tag,target="_blank")
+                        h1=tag.tag
+                        .count.hidden #{tag.count} Page
+
+
+
+block scripts
+    script.
+         $("#nav-tag").addClass("active")
+    script(src='/javascripts/jquery.grid-a-licious.min.js')
+    script(src='/javascripts/tags/tags.js')

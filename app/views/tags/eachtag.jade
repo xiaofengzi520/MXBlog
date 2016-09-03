@@ -1,0 +1,37 @@
+
+extends ../layout
+block head
+    link(rel='stylesheet', href='/stylesheets/tags/eachtag.css')
+
+block content
+    .pager#eachtag
+        .header
+            h1 Tag： #{tag}
+            h3  #{count} Page
+
+        .blogs.container
+            -each blog in blogs
+                .blog
+                    -if(blog.img.px600)
+
+                        a(href="/blog/"+blog._id,target="_blank").haveimg
+                            .imgwrap
+                                img(src=""+blog.img.px200)
+                            h2=blog.title
+                            .comment-box.hidden
+                                span.blog-time=blog.time.day
+                    -else
+                        a(href="/blog/"+blog._id,target="_blank").wrap
+                             h2=blog.title
+                             .blog-content!=blog.contentBegin
+                             .comment-box.hidden
+                                 span.blog-time=blog.time.day
+
+
+
+
+block scripts
+    script.
+         $("#nav-tag").addClass("active")
+    script(src='/javascripts/jquery.grid-a-licious.min.js')
+    script(src='/javascripts/tags/eachtag.js')

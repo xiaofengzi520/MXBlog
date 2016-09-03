@@ -1,0 +1,33 @@
+
+extends ../layout
+block head
+          link(rel='stylesheet', href='/stylesheets/blog/myblog.css')
+          //include include_ie
+block content
+        .container.allblog
+            .row.blog-wrapper
+                each post in posts
+                  .blog-each
+                    h3
+                        a.blog-title(href="/blog/"+post._id,target="_blank")!=post.title
+                    if(post.img.px1366)
+                         .blog-img
+                             img(src=""+post.img.px1366)
+                    .blog-content!=post.contentBegin
+                    .blog-content-footer
+
+                        span=post.time.day
+                        if post.tags.length
+                            a.pull-right(href='tag/'+post.tags[0].tag,target='_blank')
+                                i.fa.fa-tags
+                                =post.tags[0].tag
+
+            .row.ajax.text-center
+                if(onlyOnePage)
+                     button.btn-primary.btn.btn-block.get-ten.btn-large(data-loading-text="loading...", type="button",data-page="2") More
+
+block scripts
+    script.
+         $("#nav-blog").addClass("active")
+    script(src='/javascripts/js/button.js')
+    script(src='/javascripts/blog/myblog.js')

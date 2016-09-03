@@ -1,0 +1,41 @@
+extends ../layout
+
+block head
+        link(rel='stylesheet', href='/stylesheets/blog/eachblog.css')
+        script(src='/javascripts/highlight.pack.js')
+        script.
+            hljs.initHighlightingOnLoad();
+
+block content
+        .container.eachblog#eachblog.javascript
+            .row.blog-wrapper
+                .tree-select
+                   .blog-head
+                      h1=blog.title
+                      .row.time-and-comment
+                         span.time=blog.time.day + " "+blog.time.minute
+                         span.ds-thread-count.pull-right(data-thread-key=""+blog._id,data-count-type="comments")
+                   //.blog-tree
+                        ul#tree.list-unstyled.ztree
+                   .blog-content.blogcontent!=blog.content
+
+
+               .blog-footer
+                   .row.tags
+                        -each tag in blog.tags
+                            a.tag(href='/tag/'+tag.tag,target="_blank")=tag.tag
+                   -if(user)
+                        a.edite(href='/editblog/'+blog._id) Edit
+
+
+
+
+
+
+
+
+
+
+
+
+

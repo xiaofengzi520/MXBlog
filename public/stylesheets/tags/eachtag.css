@@ -1,0 +1,106 @@
+@media screen and (min-width: 768px) {
+  #mynav {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px inset rgba(0, 0, 0, 0.2);
+  }
+  #mynav li > a {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #mynav li > a:hover {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .navbar-brand {
+    color: rgba(51, 51, 204, 0.8) !important;
+    font-weight: normal;
+  }
+  .navbar-brand:hover {
+    color: rgba(92, 92, 214, 0.8) !important;
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+}
+body {
+  background-color: #ffffff!important;
+}
+body .pager {
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+body .blog {
+  position: relative;
+  display: block;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+body .blog .comment-box {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #47abff;
+  z-index: 3;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1em;
+}
+body .blog .comment-box .blog-time {
+  padding-top: 80px;
+  display: block;
+}
+body .blog .comment-box .blog-comment {
+  padding-bottom: 80px;
+  display: block;
+}
+body .blog img {
+  display: block;
+  width: 100%!important;
+  height: 200px!important;
+}
+body .blog .wrap {
+  display: block;
+  overflow: hidden;
+  height: 200px;
+  line-height: 20px;
+}
+body .blog .wrap h2 {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+  font-size: 22px;
+}
+body .blog .wrap:hover {
+  text-decoration: none;
+}
+body .blog .wrap .blog-content {
+  display: block;
+  overflow: hidden;
+  height: 10em;
+  padding: 0 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+body .blog .haveimg h2 {
+  font-size: 22px!important;
+  display: block;
+  overflow: hidden;
+  line-height: 200px;
+  height: 200px;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+body .blog .haveimg h2:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}

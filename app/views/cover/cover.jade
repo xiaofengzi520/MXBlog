@@ -1,0 +1,30 @@
+
+extends ../layout
+block head
+    meta(name='description',content='')
+    link(rel='stylesheet', href='/stylesheets/cover/cover.css')
+
+block content
+    .pager#cover
+
+        .covers.container
+            -each cover in covers
+                .cover
+
+                        a(href="/cover/"+cover._id,target="_blank")
+                            .imgwrap
+                                img(src=""+cover.img.px200)
+                            h2=cover.title
+                            .comment-box.hidden
+                                    span.blog-time=cover.time.day
+                                   // span.blog-comment.ds-thread-count(data-thread-key=""+cover._id ,data-count-type="comments")
+
+
+
+
+
+block scripts
+    script.
+         $("#nav-cover").addClass("active")
+    script(src='/javascripts/jquery.grid-a-licious.min.js')
+    script(src='/javascripts/cover/cover.js')

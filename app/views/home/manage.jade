@@ -1,0 +1,63 @@
+extends ../layout
+block head
+    link(rel='stylesheet', href='/stylesheets/home/mybloglist.css')
+block content
+    .pager
+        .blogs.text-center
+          .blog.col-lg-6
+            h3 Blog
+            table.table.col-lg-6
+                thead
+                    tr
+                        th Title
+                        th Click
+                        th Date
+
+                        th Ctrl
+                tbody
+                    -each blog in blogs
+                        tr
+                            th
+                                a(href="/blog/"+blog._id)=blog.title
+                            th=blog.pv
+                            th=blog.time.day
+                            th
+                              .btn-group
+                                a.btn.btn-info(href="/editblog/"+blog._id) Edit
+                                button.btn.delete.btn-danger(data-id=""+blog._id,data-cmd="blog") Delete
+                                if(blog.isTop)
+                                        button.btn.gettopblog.btn-info(data-id=""+blog._id,data-istop=""+blog.isTop) UnTop
+                                else
+                                        button.btn.gettopblog.btn-info(data-id=""+blog._id,data-istop=""+blog.isTop) Top
+          .blog.col-lg-6
+                  h3 Cover
+                  table.table.col-lg-6
+                      thead
+                          tr
+                              th Image
+                              th Title
+                              th Click
+                              th Date
+
+                              th Ctrl
+                      tbody
+                          -each cover in covers
+                              tr
+                                  th
+                                      img(src=""+cover.img.px200)
+                                  th
+                                      a(href="/cover/"+cover._id)=cover.title
+                                  th=cover.pv
+                                  th=cover.time.day
+                                  th
+                                    .btn-group
+                                      a.btn.btn-info(href="/editcover/"+cover._id) Edit
+                                      button.btn.delete.btn-danger(data-id=""+cover._id,data-cmd='cover') Delete
+                                      if(cover.isTop)
+                                            button.btn.gettopcover.btn-info(data-id=""+cover._id,data-istop=""+cover.isTop) UnTop
+                                      else
+                                            button.btn.gettopcover.btn-info(data-id=""+cover._id,data-istop=""+cover.isTop) Top
+
+block scripts
+
+    script(src='/javascripts/home/mybloglist.js')

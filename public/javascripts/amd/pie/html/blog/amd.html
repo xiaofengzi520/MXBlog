@@ -1,0 +1,145 @@
+<div class="amd" data-init-data="{{amdInitText}}" id="amd-blog">
+    <div class="amd-content">
+        <div class="amd-col">
+            <div class="amd-fmbox">
+                <div class="amd-back">
+                    <a href="{{amdBack}}"><i class="fa fa-chevron-left"></i></a>
+                </div>
+
+                <form class="amd-pub" action="{{amdPubAction}}" method="post">
+                    <div class="amd-input-wrapper amd-input-title">
+                        <input type="text" name="title" value="{{amdInitTitle}}" placeholder="Text Title..." id="title"/>
+                    </div>
+
+                    <textarea name="text" id="content"></textarea>
+                    {{#amdPubMethod}}
+                    <input type="hidden" name="__method" value="{{amdPubMethod}}"/>
+                    {{/amdPubMethod}}
+
+                    <input type="submit" value="Submit"/>
+
+                    <div class="adm-tag-wrapper">
+                        <input type="text" name="tag1" id="tag1" placeholder="Tag one" value=""/>
+                        <input type="text" name="tag2" id="tag2" placeholder="Tag two" value=""/>
+                        <input type="text" name="tag3" id="tag3" placeholder="Tag three" value=""/>
+                    </div>
+                </form>
+
+                <ul class="amd-edit-menu">
+                    <li class="hidden"><a class="amd-edit-btn-save" data-action="{{amdSaveAction}}">
+                        <i class="fa fa-save"></i>
+                        <i class="fa fa-spinner fa-spin"></i></a></li>
+                    <li><a class="amd-edit-btn-header"><i class="fa fa-text-height"></i></a></li>
+                    <li><a class="amd-edit-btn-strong"><i class="fa fa-bold"></i></a></li>
+                    <li><a class="amd-edit-btn-italic"><i class="fa fa-italic"></i></a></li>
+                    <li><a class="amd-edit-btn-blockquote"><i class="fa fa-dedent"></i></a></li>
+                    <li><a class="amd-edit-btn-code"><i class="fa fa-code"></i></a></li>
+                    <li><a class="amd-edit-btn-ul"><i class="fa fa-list-ul"></i></a></li>
+                    <li><a class="amd-edit-btn-line"><i class="fa fa-ellipsis-h"></i></a></li>
+                    <li><a class="amd-edit-btn-link"><i class="fa fa-link"></i></a></li>
+                    <li><a class="amd-edit-btn-img"><i class="fa fa-image"></i></a></li>
+                </ul>
+
+                <a class="amd-arrow amd-arrow-right"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="amd-col">
+            <div class="amd-fmbox">
+                <div class="amd-user-menu"></div>
+                <div class="amd-preview "></div>
+                <a class="amd-arrow amd-arrow-left"><i class="fa fa-angle-left"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="amd-shade">
+        <div class="amd-panel amd-panel-link">
+            <h2><i class="fa fa-link"></i></h2>
+            <ul class="amd-input-list">
+                <li>
+                    <div class="amd-input-box amd-input-link">
+                        <i class="fa fa-link amd-input-ico"></i>
+                        <input type="text" placeholder="超级链接: http://www.google.com"/>
+                        <span class="amd-input-msg"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="amd-input-box amd-input-des">
+                        <i class="fa fa-info amd-input-ico"></i>
+                        <input type="text" placeholder="描述: Google"/>
+                        <span class="amd-input-msg"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="amd-input-wrapper">
+                        <button class="amd-btn amd-btn-ok">Add</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="amd-btn-close"><i class="fa fa-times"></i></div>
+        </div>
+        <div class="amd-panel amd-panel-img">
+            <h2><i class="fa fa-image"></i></h2>
+
+            <div class="amd-view" data-action="{{amdUploadImgAction}}">
+                <span>+</span>
+
+                <div class="amd-view-content">
+                </div>
+                <form enctype="multipart/form-data" method="post">
+                    <input name="upload" type="file" multiple/>
+                </form>
+            </div>
+            <ul class="amd-input-list">
+                <li>
+                    <div class="amd-input-box amd-input-url">
+                        <i class="fa fa-paperclip amd-input-ico"></i>
+                        <input type="text" placeholder="URL"/>
+                        <span class="amd-input-msg"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="amd-input-box amd-input-alt">
+                        <i class="fa fa-paperclip amd-input-ico"></i>
+                        <input type="text" placeholder="替换文本: 新的图片 (screenshot)"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="amd-grid">
+                        <div class="amd-li">
+                            <div class="amd-input-box amd-input-width">
+                                <i class="fa fa-paperclip amd-input-ico"></i>
+                                <input type="text" placeholder="宽度: 300 (auto)"/>
+                            </div>
+                        </div>
+                        <div class="amd-li">
+                            <div class="amd-input-box amd-input-height">
+                                <i class="fa fa-paperclip amd-input-ico"></i>
+                                <input type="text" placeholder="高度: 100 (auto)"/>
+                            </div>
+                        </div>
+                        <div class="amd-li">
+                            <div class="amd-input-wrapper amd-input-align">
+                                <div class="amd-input-align-body">
+                                    <a><i class="fa fa-align-left"></i></a>
+                                    <a class="amd-active"><i class="fa fa-align-center"></i></a>
+                                    <a><i class="fa fa-align-right"></i></a>
+
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                </li>
+                <li>
+                    <div class="amd-input-wrapper">
+                        <button class="amd-btn amd-btn-ok">添加</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="amd-btn-close"><i class="fa fa-times"></i></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

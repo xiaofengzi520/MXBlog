@@ -1,0 +1,60 @@
+extends ../layout
+block head
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/stylesheets/index_ie.css">
+    <![endif]-->
+    meta(name='description',content='Xiao\'s Blog，Innovative From The Core')
+    link(rel='stylesheet',href='/stylesheets/home/index.css')
+    style.
+        .bg{
+            background-image:url('#{cover.img.original}');
+        }
+block content
+   //.bg(data-bg=''+cover.img.original)
+   .cover-index.bg
+     .cover-touming
+       .cover-wrapper
+         .logo
+            a(href='/about').img
+                img(src='/images/420x129_2.png')
+            h2.faith
+                | 简约，纯粹，个人博客
+                //a(href="/cover/"+cover._id).index-down-icon.cover-title
+                    i.icon-eye-open
+
+         .cover-index-content
+            .content!=cover.contentBegin
+            if(cover.title)
+                a(href="/cover/"+cover._id).index-down-icon.cover-title
+                    i.fa.fa-angle-right
+            else
+                a(href='/about').btn.btn-large.btn-primary.cover-title About
+
+   .cover-content
+        .banner
+            a(name='cover')
+                h2
+                     a(href='/cover/'+cover._id,target='_blank')=cover.title
+        .content!=cover.content
+
+   .blog-index
+       .banner
+           h2
+               a(href='/blog',target='_blank') Blog
+
+       .blog-wrapper
+           each topblog in topblogs
+               .header
+                   a(href='/blog/'+topblog._id,target='_blank')
+                      h2=topblog.title
+               .blog-index-content
+                   if (topblog.img.px1366)
+                       .blog-img
+                           img(src='' + topblog.img.px1366)
+
+                   .content!=topblog.contentBegin
+
+
+
+block scripts
+    script(src='/javascripts/home/index.js')

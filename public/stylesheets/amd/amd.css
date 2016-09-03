@@ -1,0 +1,463 @@
+/*  =Reset
+--------------------------------*/
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  position: relative;
+  min-width: 440px;
+  height: 100%;
+}
+.amd-fmbox {
+  position: relative;
+  margin: 0 auto;
+  max-width: 740px;
+  min-width: 360px;
+  height: 100%;
+}
+.amd-shade {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.amd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fcfdff;
+  overflow: hidden;
+}
+.amd-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+}
+.amd-grid {
+  font-size: 0;
+}
+.amd-grid .amd-li {
+  display: inline-block;
+  width: 33.333%;
+  font-size: 13px;
+  vertical-align: top;
+}
+.amd-col {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 102;
+  width: 50%;
+  overflow: hidden;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.amd-col:first-child {
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.amd-col:last-child {
+  left: 50%;
+  border-left: 1px solid #e0e2e4;
+  background-color: rgba(252, 253, 255, 0.8);
+}
+@media screen and (max-width: 880px) {
+  .amd-col {
+    width: 100%;
+  }
+  .amd-col:first-child {
+    left: 0;
+  }
+  .amd-col:last-child {
+    left: 100%;
+  }
+}
+.amd-input-wrapper,
+.amd-input-box {
+  position: relative;
+  height: 32px;
+}
+.amd-input-wrapper {
+  padding: 2px;
+}
+.amd-input-box {
+  padding: 2px 32px 2px 12px;
+}
+.amd-input-ico {
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 10px;
+  color: #666666;
+}
+.amd-input-box input[type=text] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 0 10px 0 30px;
+  margin: 0 -11px 0 -11px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+.amd-input-box input[type=text]:focus {
+  border-color: #0088cc;
+  box-shadow: 0 1px 3px -1px rgba(0, 136, 204, 0.3);
+}
+.amd-input-box .amd-input-msg {
+  display: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 10px;
+  color: #fa3c88;
+}
+.amd-input-box input:focus ~ .amd-input-msg {
+  display: none!important;
+}
+.amd-input-align-body {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 3px;
+}
+.amd-input-align a {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 33.333%;
+  line-height: 32px;
+  font-size: 16px;
+  color: #999999;
+}
+.amd-input-align a:hover {
+  cursor: pointer;
+}
+.amd-input-align a.amd-active {
+  color: #000000;
+}
+.amd-back {
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  line-height: 28px;
+  width: 26px;
+  text-align: center;
+}
+.amd-back a {
+  display: block;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+}
+.amd-back:hover a {
+  color: #000000;
+}
+.amd-pub > textarea[name=text] {
+  display: none;
+}
+.amd-input-title {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding: 0;
+}
+.amd-input-title input {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #e0e2e4;
+  border-bottom: 1px solid #e0e2e4;
+  background-color: #ffffff;
+  min-height: 35px;
+  padding-left: 10px;
+}
+.amd-pub > input[type=submit],
+.amd-pub ~ input[type=submit] {
+  position: absolute;
+  top: 12px;
+  left: 27px;
+  height: 28px;
+  padding: 2px 8px;
+  min-width: 40px;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #0088cc;
+  font-size: 12px;
+  font-weight: bold;
+}
+.amd-pub > input[type=submit]:hover,
+.amd-pub ~ input[type=submit]:hover {
+  cursor: pointer;
+  color: #0056b8;
+}
+.amd-edit-menu,
+.amd-user-menu {
+  position: absolute;
+  top: 7px;
+  right: 25px;
+  margin: 0!important;
+  padding: 0!important;
+  width: 380px;
+  height: 36px;
+  text-align: right;
+  font-size: 0;
+}
+.amd-edit-menu li {
+  height: 34px;
+  display: inline-block;
+}
+.amd-edit-menu .btn-group {
+  height: 34px;
+}
+.amd-edit-menu .btn-group a {
+  height: 34px;
+}
+.amd-edit-menu li a {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 34px;
+  width: 34px;
+  border-radius: 2px;
+  text-align: center;
+  border: 1px solid transparent;
+  color: #999999;
+}
+.amd-edit-menu li a:hover {
+  border-color: #dddddd;
+  color: #000000;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.amd-edit-btn-save.saving:hover {
+  border-color: transparent;
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+}
+.amd-edit-btn-save .fa-spinner {
+  color: #c4baba;
+  display: none;
+}
+.amd-panel {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  margin-left: -281px;
+  padding: 20px;
+  width: 520px;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+.amd-panel h2 {
+  font-size: 1.7em;
+  line-height: 2.4em;
+  padding: 0 20px;
+  margin: -20px -20px 20px;
+  border-bottom: 1px solid #cecece;
+  color: #666666;
+}
+.amd-input-list {
+  margin: 0;
+  padding: 0;
+}
+.amd-input-list li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+.amd-input-list li:last-child {
+  margin-bottom: 0px;
+}
+.amd-view {
+  position: relative;
+  padding: 2px;
+  margin-bottom: 10px;
+  height: 200px;
+  text-align: center;
+  color: #c9c9c9;
+  line-height: 200px;
+  font-size: 120px;
+  outline: 2px dashed #d8d8d8;
+}
+.amd-view form {
+  display: none;
+}
+.amd-view-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 500px rgba(0, 0, 0, 0.02) inset;
+}
+.amd-view-content:hover {
+  cursor: pointer;
+  box-shadow: 0 0 500px rgba(0, 0, 0, 0.02) inset, 0 0 16px rgba(0, 0, 0, 0.2) inset;
+}
+.amd-btn {
+  display: inline-block;
+  border: none;
+  background-color: #ffffff;
+  text-align: center;
+  min-width: 68px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  outline: 0;
+  border: 1px solid #e2e2e2;
+  background-color: #f5f5f5;
+  color: #525252;
+}
+.amd-btn:hover {
+  background-color: #f1f1f1;
+}
+.amd-btn-ok {
+  width: 100%;
+  line-height: 32px;
+}
+.amd-btn-close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  line-height: 100%;
+  color: #999999;
+}
+.amd-btn-close:hover {
+  color: #666666;
+  cursor: pointer;
+}
+.adm-tag-wrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+.adm-tag-wrapper input {
+  height: 35px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+}
+.adm-tag-wrapper input {
+  float: left;
+  width: 33.3333333333333333333333333%;
+  border-right: none;
+  background: transparent;
+  border-left: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-bottom: none;
+  border-radius: 0;
+}
+.amd .CodeMirror {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  bottom: 35px;
+  left: 0;
+  padding: 0;
+  height: auto;
+  background-color: transparent;
+}
+#amd-cover .CodeMirror {
+  bottom: 120px!important;
+}
+.amd .CodeMirror-gutters {
+  background-color: transparent;
+  border-right: none;
+}
+.amd .CodeMirror-lines {
+  padding: 10px 0;
+}
+.amd-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 105;
+  width: 20px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  color: #c7c7c7;
+  cursor: pointer;
+}
+.amd-arrow:hover {
+  color: #000000;
+  font-weight: bold;
+}
+.amd-arrow-left {
+  left: 0;
+}
+.amd-arrow-right {
+  right: 0;
+}
+.amd-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  padding: 20px 20px 20px 0;
+  height: auto;
+  overflow: auto;
+  word-wrap: break-word;
+  /* 换行 */
+}
+.amd-invalid {
+  border-color: #ff0000 !important;
+  box-shadow: 0 0 2px #ff0000 inset !important;
+}
+.amd-preview {
+  padding: 10px;
+  line-height: 1.7em;
+}
+.amd-preview p {
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 20px;
+}
+#amd-cover .quote-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+#amd-cover .quote-wrapper .quote {
+  width: 100%;
+}
+#amd-cover .quote-wrapper .quote textarea {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 100%!important;
+  height: 120px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

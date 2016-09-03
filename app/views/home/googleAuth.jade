@@ -1,0 +1,15 @@
+
+extends ../layout
+block head
+    link(rel='stylesheet', href='/stylesheets/home/login.css')
+block content
+    .container.formwrapper
+        .row
+            form.form-reg(method="post")
+                h2.form-reg-heading googleAuth
+                input.input-block-level(type='text',placeholder='请输入验证码',name='code')
+
+                button.btn.btn-primary.btn-block(type='submit') Submit
+block scripts
+
+

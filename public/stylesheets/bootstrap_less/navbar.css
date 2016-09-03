@@ -1,0 +1,5 @@
+NameError: .clearfix is undefined in E:\nodejs\blog2\public\stylesheets\bootstrap_less\navbar.less on line 17, column 3:
+16   // Prevent floats from breaking the navbar
+17   .clearfix();
+18 }
+

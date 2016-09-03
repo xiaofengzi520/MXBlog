@@ -1,0 +1,90 @@
+body {
+  background: url("/images/post.jpg") repeat;
+}
+#blogpost {
+  padding: 10px;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+
+#blogpost .row > .form-post-article h2 {
+  color: #fff;
+  margin-bottom: 1em;
+  border-bottom: 2px solid;
+  padding: 15px;
+  background-color: cornflowerblue ;
+  text-align: center;
+}
+#blogpost .row > .form-post-article input[type='text'] {
+  margin-bottom: 1em;
+  border: 1px solid #ABABAB;
+  border-radius: 1px;
+  background: transparent;
+}
+#blogpost .row > .form-post-article button[type='submit'] {
+  margin-top: 1em;
+  border-radius: 0px;
+  border: none;
+}
+#blogpost .row > .form-post-article #blog-content .btn-toolbar .btn-group {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+#blogpost .row > .form-post-article #blog-content .btn-toolbar .btn-group a {
+  border: 0;
+  border-radius: 0;
+}
+#editor {
+  overflow: scroll;
+  width: auto;
+  height: 300px;
+  border: 1px solid #ABABAB;
+  font-size: 14px;
+  padding: 10px 5px;
+  border-radius: 1px;
+}
+#editor pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  whitewhite-space: normal ;
+  /* Internet Explorer 5.5+ */
+}
+#editor img {
+  max-width: 100%;
+}
+body {
+  background-color: #fff !important;
+}
+#info {
+  margin: 5px;
+  z-index: 100000000000;
+}
+#mynav {
+  background: transparent;
+}
+body {
+  background-color: transparent !important;
+}
+.form-post-article,
+h3,
+input,
+#blog-content,
+#blogpost,
+.row {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+input,
+.btn-group,
+.blogcontent {
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+#main_bg {
+  background-color: transparent;
+  background-size: cover !important;
+}

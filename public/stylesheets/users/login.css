@@ -1,0 +1,67 @@
+body {
+  background-image: url('/images/bg.jpg') !important;
+}
+.bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #70B8C4 !important;
+  background-size: cover;
+  width: 100%;
+  z-index: -100;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+}
+.form-reg {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.info {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.info .alert {
+  border: none;
+}
+.form-reg .form-reg-heading {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.form-reg button {
+  border-radius: 0;
+  margin-top: 20px;
+  background-color: #B155DF;
+}
+.form-reg button:hover {
+  background-color: #BE72E4;
+}
+.form-reg input[type="text"],
+.form-reg input[type='email'],
+.form-reg input[type="password"] {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+}
+.formwrapper {
+  margin-top: 80px;
+}
+.form-reg input[type="text"]:focus,
+.form-reg input[type='email']:focus,
+.form-reg input[type="password"]:focus {
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('/images/bg.jpg') !important;
+  }
+}

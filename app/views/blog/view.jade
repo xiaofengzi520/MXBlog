@@ -1,0 +1,41 @@
+
+extends ../layout
+block head
+    link(rel='stylesheet', href='/stylesheets/blog/view.css')
+
+block content
+    .pager#view
+        .months.container
+          -each month in MonthBlogs
+             .month.col-lg-12
+                .month-title.pull-left.col-xs-12.col-md-2
+                    h2.pull-left #{month['time.month']}
+                    h2.count.pull-right #{month.count} Page
+                .blogs.pull-right.col-xs-12.col-md-10
+                   -each blog in month.blogs
+                     .blog
+                        -if(blog.img.px200)
+
+                          a(href="/blog/"+blog._id,target="_blank").haveimg
+                            .imgwrap
+                                img(src=""+blog.img.px200)
+                            h2=blog.title
+                            .comment-box.hidden
+                                span.blog-time=blog.time.day
+
+
+                        -else
+                          a(href="/blog/"+blog._id,target="_blank").wrap
+                              h2=blog.title
+                              .blog-content!=blog.contentBegin
+                              .comment-box.hidden
+                                    span.blog-time=blog.time.day
+
+
+
+
+block scripts
+    script.
+         $("#nav-view").addClass("active")
+    script(src='/javascripts/jquery.grid-a-licious.min.js')
+    script(src='/javascripts/blog/view.js')

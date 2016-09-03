@@ -1,0 +1,5 @@
+NameError: variable @line-height-computed is undefined in E:\nodejs\blog2\public\stylesheets\bootstrap_less\type.less on line 10, column 16:
+9 p {
+10   margin: 0 0 (@line-height-computed / 2);
+11 }
+
