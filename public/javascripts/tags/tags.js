@@ -1,10 +1,4 @@
-/**
- * Created with JetBrains WebStorm.
- * User: 灵勇
- * Date: 13-8-8
- * Time: 下午9:42
- * To change this template use File | Settings | File Templates.
- */
+
 $(".tags").gridalicious({
     animate: true,
     width:220,
